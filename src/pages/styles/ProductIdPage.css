@@ -1,0 +1,21 @@
+.productIdPage__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+
+}
+.productIdPage__imagensAndInfo{
+    display: flex;
+    justify-content: center;
+    gap: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 2em;
+}
+
+@media (max-width:1000px) {
+    .productIdPage__imagensAndInfo{
+        flex-wrap: wrap;
+    }
+}

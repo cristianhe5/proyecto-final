@@ -1,0 +1,27 @@
+.price__form{
+    padding: 1em;
+    width: 95%;
+}
+.from__lable-price{
+    display: flex;
+    flex-direction: column;
+}
+.from__span-price{
+    font-size: 1em;
+    font-weight: 700;
+}
+.from__input-price{
+    border: 1px solid #cdcdcd;
+    border-radius: 5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+}
+.from__btn-price{
+    margin-top: 1em;
+    border: none;
+    border-radius: 0.3em; 
+    background-color: #f85555;  
+    color: white;
+    font-size: 1.1em; 
+}

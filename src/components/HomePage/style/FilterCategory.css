@@ -1,0 +1,17 @@
+.category__filter{
+    padding: 1em;
+    width: 95%;
+}
+.category__title{
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.category__hr{
+    border: solid 1px #cdcdcd;
+    margin-bottom: 1em;
+}
+.category__li{
+    font-size: 1.1em;
+    font-weight: 300;
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+.purchases{
+    width: 100%;
+    padding-top: 10vh;
+}
+.purchase__title{
+    padding-left: 1em;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.purchases__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 2em;
+}

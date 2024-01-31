@@ -1,0 +1,40 @@
+.purchasesCard{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    padding-left: 2em;
+    border-radius: 0.8em;
+    border: 1px solid #ccca;
+    margin: auto;
+}
+.purchasesCard__header{
+    width: 100%;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+}
+.purchasesCard__image{
+    padding: 0.5em;
+}
+.purchaseCard__description{
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.purchasesCard__produc-title{
+    font-size: 1em;
+    color: #aeaeae;
+    font-weight: 600;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+.purchasesCard__quantity{
+    text-align: center;
+    font-size: 1.2em;
+}
+.purchasesCard__price::before{
+    content: '$';
+}
