@@ -1,4 +1,4 @@
-import React from 'react'
+
 import FormRegister from '../components/RegisterPage/FormRegister'
 import '../components/RegisterPage/styles/FormRegister.css'
 const RegisterPage = () => {
