@@ -13,6 +13,7 @@ const HomePage = () => {
     from: 0,
     to: Infinity
   })
+  const [isDisable, setIsDisable] = useState(false)
   const products = useSelector(store => store.products)
 
   const dispatch = useDispatch()
@@ -22,10 +23,10 @@ const HomePage = () => {
 
   const inputName = useRef()
 
-  const handleInputName = () => {    
+  const handleInputName = () => {
     setNameValue(inputName.current.value.toLowerCase().trim())
   }
-  
+
 
   const callBackFilter = prod => {
     //Filtrado por nombre
@@ -41,22 +42,47 @@ const HomePage = () => {
     return filterName && filterCategory && filterPrice
 
   }
-  
-  
+
+  const handleModMenu = () => {
+    setIsDisable(true)
+  }
+  const handleExit = () => {
+    setIsDisable(false)
+  }
+
+
   return (
     <div className='home__container'>
 
       <div className='home__filter-container'>
         <h2 className='filter__title'>Price filters</h2>
-        <FilterPrice setPriceRange={setPriceRange}/>
+        <FilterPrice setPriceRange={setPriceRange} />
         <FilterCategory setCategorySlected={setCategorySlected} />
       </div>
       <div className='input__product-div'>
-      <input className='home__input-search' onChange={handleInputName} type="text" placeholder='Product name' ref={inputName}/>
+        <input className='home__input-search' onChange={handleInputName} type="text" placeholder='Product name' ref={inputName} />
+
+        <div className='modBtn__div'>
+          <button className='filter__modMenu-btn' onClick={handleModMenu}><i className='bx bx-filter-alt'></i></button>
+        </div>
+
+
+        <div className={`menu ${isDisable && "menu__disable"}`}>
+          <div className='modMenu__container'>
+          <div className='div__x'><span onClick={handleExit} className='span__x'><i className='bx bx-x'></i></span></div>
+            <h2 className='modeMenu__title'>Price filters</h2>
+            <FilterPrice setPriceRange={setPriceRange} />
+            <FilterCategory
+              setCategorySlected={setCategorySlected}
+              setIsDisable={setIsDisable} />
+          </div>
+          
+        </div>
+
         <div className='product__container'>
           {
-            products?.filter(callBackFilter).map( prod => ( // le pasamos como prop los productos que son el iterador 
-              <ProductCard 
+            products?.filter(callBackFilter).map(prod => ( // le pasamos como prop los productos que son el iterador 
+              <ProductCard
                 key={prod.id}
                 product={prod}
               />

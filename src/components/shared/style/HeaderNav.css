@@ -31,3 +31,76 @@
     text-decoration: none;
     color: white;
 }
+
+.headerMenu__btn{
+    display: flex;
+    height: 2.5em;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 1em;
+    display: none;
+    color: #f85555;
+    font-weight: 700;
+}
+
+.hederMenu{
+    width: 40%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #f85555;
+    z-index: 6;
+    transform: translateX(1000%);
+    right: 0;  
+}
+.headerMenu__disable{
+    transform:translateX(0%);
+}
+.HeaderMenu__ul{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+}
+.headerMenu__link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.4s;
+}
+.headerMenu__link:hover{
+    color: #cdcdcd;
+}
+
+.headerMenu__x{
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.headerMenu__span-x{
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+.headerMenu__span-x:hover{
+    color: rgb(119, 119, 119);
+}
+
+@media (max-width: 650px) {
+    .header__nav{
+        display: none;
+    }
+    .headerMenu__btn{
+        display: flex;
+    }
+}
+@media (max-width: 400px) {
+    .hederMenu{
+        width: 55%;
+    }
+}

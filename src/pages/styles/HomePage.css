@@ -4,7 +4,6 @@
 .home__filter-container{
     position: fixed;
     top: 30%;
-    
 }
 .filter__title{
     font-weight: 500;
@@ -16,18 +15,40 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 .home__input-search{
     width: 100%;
     max-width: 50em;
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 3em;
     padding: 0.8em;
     border-radius: 0.5em;
     outline: none;
     border: solid 1px #cdcdcd;
+    
 
 }
+.modBtn__div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0.5em;
+    display: none;
+}
+.filter__modMenu-btn{
+    background-color: #f85555;
+    color: white;
+    width: 3em;
+    border: none;
+    border-bottom-right-radius: 5em ;
+    transition: background-color 0.5s ;
+}
+.filter__modMenu-btn:hover{
+    background-color: #cdcdcd;
+}
+
 .product__container{
     
     display: flex;
@@ -39,8 +60,99 @@
     margin-left: auto;
 }
 
+.menu{
+    width: 40%;    
+    position: fixed;
+    z-index: 5;    
+    top: 0;
+    bottom: 0;  
+    left: 0;  
+    transform: translateX(-1000%);
+    transition: transform 0.5s ease;
+    background-color: #f85555eb;
+    
+}
+.menu__disable{
+    transform:translateX(0%);
+}
+.modMenu__container{
+    width: 100%;
+    height: 100%;
+    padding: 3em 2em 2em 2em;
+    
+}
+.modeMenu__title{
+    color: white;
+}
+.div__x{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.span__x{
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+.span__x:hover{
+    color: rgb(119, 119, 119);
+}
+
+/* .menu{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #3ca70e;
+    position: fixed;
+    right: 0;
+    z-index: 5; 
+    transform: translateX(1000%);
+    transition: transform 0.5s ease ;
+  } */
+
+
 @media (max-width: 1712px) {
     .product__container{
         max-width: 1100px;
     }
 }
+@media (max-width: 1230px) {
+    .product__container{
+        max-width: 900px;  
+        padding-right: 0.5em;     
+    }
+}
+
+@media (max-width: 845px) {
+    .home__filter-container{
+        display: none;
+    }
+    .product__container{
+    
+        display: flex;
+        justify-content: center;
+    
+    }
+    .modBtn__div{
+        display: flex ;
+        margin-bottom: 2em ;
+    }
+    .home__input-search{
+        margin-bottom: 0;
+    
+    }
+}
+@media (max-width: 470px) {
+    .menu{
+        width: 62%;         
+    }
+    .modMenu__container{
+        padding: 1em;
+    }
+    
+}
+

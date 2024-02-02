@@ -15,3 +15,16 @@
     font-weight: 300;
     cursor: pointer;
 }
+
+@media (max-width: 845px) {
+    .category__title{
+        color: white;
+    }
+    .category__li{
+        color: white;
+        transition: color 0.4s;
+    }
+    .category__li:hover{
+        color: #cdcdcd;
+    }
+}
